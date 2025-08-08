@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museveni 2026 - For A Better Uganda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ffd700; /* Gold yellow */
+            --secondary-color: #000000; /* Black */
+            --dark-color: #333333;
+            --light-color: #f4f4f4;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --info-color: #17a2b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--dark-color);
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+            position: relative;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        nav ul li.active a {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.nrm.ug/sites/default/files/styles/hero_image/public/2023-09/President%20Museveni%20campaign%20rally.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: white;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+        }
+
+        /* About Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--dark-color);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        /* Vision Section */
+        .vision {
+            background-color: white;
+            padding: 100px 0;
+        }
+
+        .vision-points {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .vision-points {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .vision-points {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+
+        .vision-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .vision-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .vision-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .vision-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: white;
+            padding: 100px 0;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .contact-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+            }
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .contact-info p {
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .footer-col p {
+            margin-bottom: 15px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Campaign Progress */
+        .campaign-progress {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+
+        .progress-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .progress-item {
+            margin-bottom: 30px;
+        }
+
+        .progress-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--primary-color);
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* Upcoming Events */
+        .events {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .event-list {
+            display: grid;
+            gap: 30px;
+        }
+
+        .event-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .event-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .event-date .day {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .event-date .month {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .event-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .event-details .event-meta {
+            display: flex;
+            margin-bottom: 10px;
+            color: #777;
+        }
+
+        .event-meta span {
+            margin-right: 15px;
+        }
+
+        .event-meta i {
+            margin-right: 5px;
+            color: var(--primary-color);
+        }
+
+        /* News Section */
+        .news {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-img {
+            height: 200px;
+        }
+
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-date {
+            font-size: 0.8rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .news-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .news-content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .vision-points {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-col:last-child {
+                grid-column: span 2;
+                margin-top: 30px;
+            }
+
+            .progress-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 90px);
+                background-color: white;
+                transition: all 0.3s ease;
+                padding: 30px;
+            }
+
+            nav.active {
+                left: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .vision-points {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-col:last-child {
+                grid-column: span 1;
+            }
+
+            .event-item {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Page specific styles */
+        #home-page, #about-page, #vision-page, #gallery-page, #contact-page {
+            display: none;
+        }
+
+        #home-page {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLMk3OzL1_gMDig5cPTHqROjS7P2K4CjOUIQ&s" alt="Official logo of President Yoweri Museveni's 2026 re-election campaign">
+                <div class="logo-text">
+                    <h1>Museveni 2026</h1>
+                    <p>For A Better Uganda</p>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li class="active"><a href="#" class="page-link" data-page="home">Home</a></li>
+                    <li><a href="#" class="page-link" data-page="about">About</a></li>
+                    <li><a href="#" class="page-link" data-page="vision">Vision</a></li>
+                    <li><a href="#" class="page-link" data-page="gallery">Gallery</a></li>
+                    <li><a href="#" class="page-link" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <main id="home-page">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Continuing The Journey For A Prosperous Uganda</h1>
+                <p>Join His Excellency Yoweri Kaguta Museveni in building a stronger, united, and prosperous Uganda for all citizens.</p>
+                <a href="#" class="btn page-link" data-page="about">Learn More</a>
+                <a href="#" class="btn btn-outline page-link" data-page="contact">Join Campaign</a>
+            </div>
+        </section>
+
+        <!-- Campaign Progress -->
+        <section class="campaign-progress">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Campaign Progress</h2>
+                    <p>The movement for continued transformation of Uganda is growing stronger every day. Join us!</p>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-col">
+                        <div class="progress-item">
+                            <div class="progress-title">
+                                <span>Voter Registration</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-item">
+                            <div class="progress-title">
+                                <span>Endorsements</span>
+                                <span>62%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 62%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-col">
+                        <div class="progress-item">
+                            <div class="progress-title">
+                                <span>Fundraising</span>
+                                <span>83%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 83%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-item">
+                            <div class="progress-title">
+                                <span>Volunteers</span>
+                                <span>91%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 91%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="events">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Upcoming Events</h2>
+                    <p>Join His Excellency at these important campaign events across Uganda</p>
+                </div>
+                
+                <div class="event-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Campaign Launch Rally</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kololo Ceremonial Grounds, Kampala</span>
+                                <span><i class="fas fa-clock"></i> 10:00 AM</span>
+                            </div>
+                            <p>The official launch of the 2026 presidential campaign with special guests and performances.</p>
+                            <a href="#" class="btn page-link" data-page="contact">RSVP Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Youth Empowerment Symposium</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kyambogo University</span>
+                                <span><i class="fas fa-clock"></i> 2:00 PM</span>
+                            </div>
+                            <p>Engaging Uganda's youth on policies for job creation and entrepreneurship opportunities.</p>
+                            <a href="#" class="btn page-link" data-page="contact">RSVP Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">30</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Agricultural Development Tour</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Mbarara District</span>
+                                <span><i class="fas fa-clock"></i> 8:00 AM</span>
+                            </div>
+                            <p>Showcasing agricultural transformation projects and meeting with farmers' groups.</p>
+                            <a href="#" class="btn page-link" data-page="contact">RSVP Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News -->
+        <section class="news">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Latest News</h2>
+                    <p>Stay updated with the latest developments from the Museveni 2026 campaign</p>
+                </div>
+                
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="https://www.nrm.ug/sites/default/files/styles/news_attachement/public/blog-images/J00_2210.JPG" alt="President Museveni chairs NRM High Command meeting">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">August 3, 2025</div>
+                            <h3>President Museveni Chairs High Command Meeting</h3>
+                            <p>Strategizing for upcoming elections and national development priorities.</p>
+                            <a href="https://www.nrm.ug/blog/president-museveni-chairs-high-command-meeting" target="_blank" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="https://www.nrm.ug/sites/default/files/styles/news_main_820x440/public/news-images/_R8A7505%20-%20c.jpg?itok=lVQ74AUf" alt="President Museveni addressing campaign rally">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">July 25, 2025</div>
+                            <h3>NRM Village Elections Underway</h3>
+                            <p>Strengthening grassroots support through local leadership structures nationwide.</p>
+                            <a href="https://www.nrm.ug/news/nrm-dispatches-teams-conduct-village-structure-elections" target="_blank" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="https://www.nrm.ug/sites/default/files/styles/news_attachement/public/news-images/_DSC0163%20-%20new.jpg" alt="Women empowerment program praised by Museveni">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">July 18, 2025</div>
+                            <h3>NRM Leaders Praise Museveni's Women Empowerment Efforts</h3>
+                            <p>Recognizing initiatives that advance gender equality and economic opportunities.</p>
+                            <a href="https://www.nrm.ug/news/namayanja-praises-president-musevenis-effort-empowering-women" target="_blank" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- About Page -->
+    <main id="about-page">
+        <section class="about" style="padding: 150px 0 100px;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About His Excellency</h2>
+                    <p>Learn about President Yoweri Kaguta Museveni's leadership journey and achievements</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>A Legacy of Transformational Leadership</h3>
+                        <p>Yoweri Kaguta Museveni was born in 1944 in Rwakitura, Uganda. He attended Ntare School, and later university in Dar es Salaam, Tanzania where he studied political science and economics.</p>
+                        <p>President Museveni led the National Resistance Movement (NRM) that ended years of political turmoil in 1986, becoming President of Uganda. Since then, he has overseen Uganda's transformation into a more stable, democratic, and economically prosperous nation.</p>
+                        <p>With decades of leadership experience, President Museveni continues to champion pan-African unity, economic development, and regional security cooperation.</p>
+                        <p>For the 2026 elections, he seeks another term to consolidate the gains made and complete ongoing developmental projects across Uganda.</p>
+                    </div>
+                    <div class="about-img">
+                        <img src="https://chitra-production.s3.eu-west-2.amazonaws.com/production/images/4d7/c92682e3-1662-47f3-ba28-6279b44c74d7/c67/d41a6fa8-1a19-4dca-b2dd-a1aa2e8f4c67/H-E-Yoweri-Kaguta-Museveni.jpg" alt="Official portrait of President Yoweri Kaguta Museveni wearing traditional Ugandan attire in a dignified pose">
+                    </div>
+                </div>
+                
+                <div class="section-title" style="margin-top: 80px;">
+                    <h2>Key Achievements</h2>
+                    <p>Highlights from President Museveni's tenure in office</p>
+                </div>
+                
+                <div class="vision-points">
+                    <div class="vision-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Economic Growth</h3>
+                        <p>Uganda's GDP has grown consistently, with significant expansion in agriculture, services, and emerging industries.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-road"></i>
+                        <h3>Infrastructure Development</h3>
+                        <p>Massive investments in roads, railways, and energy projects have transformed Uganda's landscape.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Peace & Security</h3>
+                        <p>Restored stability across most regions and professionalized Uganda's security forces.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education For All</h3>
+                        <p>Universal primary and secondary education programs have dramatically increased literacy rates.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-tint"></i>
+                        <h3>Clean Water Access</h3>
+                        <p>Expanded rural water coverage benefiting millions of Ugandans previously without clean water.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Healthcare Improvement</h3>
+                        <p>Built hospitals and health centers nationwide, improving healthcare accessibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Vision Page -->
+    <main id="vision-page">
+        <section class="vision">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Vision For Uganda</h2>
+                    <p>President Museveni's comprehensive plan for Uganda's continued development</p>
+                </div>
+                
+                <div class="vision-points">
+                    <div class="vision-card">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Industrialization</h3>
+                        <p>Transform Uganda into a modern industrial economy through value addition to agricultural products and mineral resources.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Energy Infrastructure</h3>
+                        <p>Complete major energy projects to provide reliable electricity nationwide and support industrialization.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-globe-africa"></i>
+                        <h3>Regional Integration</h3>
+                        <p>Strengthen East African Community cooperation and expand cross-border infrastructure projects.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-wifi"></i>
+                        <h3>Digital Transformation</h3>
+                        <p>Expand digital infrastructure and internet connectivity to drive innovation and service delivery.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Wealth Creation</h3>
+                        <p>Implement programs that empower Ugandans to participate in and benefit from economic growth.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Agricultural Modernization</h3>
+                        <p>Increase irrigation, mechanization, and access to markets for Uganda's farming communities.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 50px;">
+                    <div class="section-title">
+                        <h2>Policy Priorities</h2>
+                        <p>The key policy areas that will guide the next term</p>
+                    </div>
+                    
+                    <div class="about-content vision-policies" style="grid-template-columns: 2fr 1fr;">
+                        <div>
+                            <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--secondary-color);">Our Commitment to Uganda</h3>
+                            <p style="margin-bottom: 20px;">President Museveni's vision for 2026-2031 is built on consolidating the achievements of the past and accelerating Uganda's path to middle-income status.</p>
+                            
+                            <div style="margin-bottom: 30px;">
+                                <div style="display: flex; margin-bottom: 15px;">
+                                    <div style="margin-right: 15px; color: var(--primary-color); font-weight: bold;">1</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 5px;">Economic Empowerment</h4>
+                                        <p>Continued focus on job creation, entrepreneurship, and skilling programs for youth and women.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; margin-bottom: 15px;">
+                                    <div style="margin-right: 15px; color: var(--primary-color); font-weight: bold;">2</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 5px;">Infrastructure Development</h4>
+                                        <p>Complete ongoing projects and initiate new ones in transport, energy, and water infrastructure.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; margin-bottom: 15px;">
+                                    <div style="margin-right: 15px; color: var(--primary-color); font-weight: bold;">3</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 5px;">Service Delivery</h4>
+                                        <p>Enhance quality and access to health, education, and other essential services nationwide.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; margin-bottom: 15px;">
+                                    <div style="margin-right: 15px; color: var(--primary-color); font-weight: bold;">4</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 5px;">Security & Justice</h4>
+                                        <p>Strengthen institutions to ensure safety, rule of law, and protection of citizens' rights.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; margin-bottom: 15px;">
+                                    <div style="margin-right: 15px; color: var(--primary-color); font-weight: bold;">5</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 5px;">Governance</h4>
+                                        <p>Enhance systems for transparency, accountability, and efficient public service delivery.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="vision-img">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d351c762-799c-43ae-829b-c943d7a7247f.png" alt="Infographic showing Uganda's development progress with charts illustrating GDP growth, infrastructure expansion, and social service improvements">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Gallery Page -->
+    <main id="gallery-page">
+        <section class="gallery">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Campaign Gallery</h2>
+                    <p>Moments from the Museveni 2026 campaign trail across Uganda</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://kcca.go.ug/includes/slider/img/home/A24I5034.jpg" alt="President Museveni inspiring supporters at Kampala rally">
+                        <div class="gallery-overlay">
+                            <h3>Campaign Rally</h3>
+                            <p>Engaging with supporters in Kampala</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://www.monitor.co.ug/resource/blob/4941414/86b46822f5624adb3b6a9fe3c0576d81/latest04pix-data.jpg" alt="President holding development dialogue with local leaders">
+                        <div class="gallery-overlay">
+                            <h3>Community Engagement</h3>
+                            <p>Listening to citizens' concerns in rural Uganda</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://www.independent.co.ug/wp-content/uploads/2022/12/museveni.jpg" alt="President inspecting modern farming equipment demonstration">
+                        <div class="gallery-overlay">
+                            <h3>Agricultural Tour</h3>
+                            <p>Promoting modern farming techniques</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://nrm.ug/sites/default/files/styles/news_main_820x440/public/news-images/National%20Youth%20day%20celebrations%202021%20-%20Kololo%20-%2007.jpg?itok=3Jz8ViAi" alt="Young supporters cheering as President Museveni arrives at a university campus event">
+                        <div class="gallery-overlay">
+                            <h3>Youth Mobilization</h3>
+                            <p>Engaging with Uganda's next generation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://softpower.ug/museveni-opens-new-nms-pharmaceutical-complex-calls-for-local-manufacturing-of-medicines-and-vaccines/nms1/" alt="President Museveni cutting ribbon at the opening of a new hospital building">
+                        <div class="gallery-overlay">
+                            <h3>Project Commissioning</h3>
+                            <p>Launching new healthcare facilities</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://trumpetnews.co.ug/oaxithor/2025/05/museveni-in-kasese-680x375.jpeg" alt="President Museveni greeting disabled children at a special needs school visit">
+                        <div class="gallery-overlay">
+                            <h3>Inclusive Leadership</h3>
+                            <p>Ensuring no one is left behind</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://ugdiplomat.com/wp-content/uploads/2024/11/20241128_130855-scaled.jpg" alt="Colorful traditional dancers performing at a campaign cultural event">
+                        <div class="gallery-overlay">
+                            <h3>Cultural Celebration</h3>
+                            <p>Uganda's diverse heritage on display</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://www.updf.go.ug/wp-content/uploads/2024/02/HE-President-Yoweri-Museveni-on-arrival-at-the-function-of-the-13th-Annual-Tarehe-Sita-thanks-giving-at-Kololo-2560x1280.jpeg" alt="President Museveni shaking hands with military officers during a security forces visit">
+                        <div class="gallery-overlay">
+                            <h3>Security Engagement</h3>
+                            <p>Commending Uganda's security forces</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Page -->
+    <main id="contact-page">
+        <section class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Join The Movement</h2>
+                    <p>Get involved with the Museveni 2026 campaign for a prosperous Uganda</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>The Museveni 2026 campaign welcomes all Ugandans to participate in building a better future. Reach out to learn about volunteer opportunities, campaign events, or to share your ideas.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Headquarters</h4>
+                                    <p>Plot 10 Kyadondo Road, Kampala, Uganda</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+256 41 433 2200</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@museveni2026.ug</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Working Hours</h4>
+                                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin-top: 40px;">Follow The Campaign</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="campaign-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="tel" placeholder="Your Phone Number">
+                            </div>
+                            
+                            <div class="form-group">
+                                <select style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                                    <option value="">How would you like to help?</option>
+                                    <option value="volunteer">Volunteer</option>
+                                    <option value="donate">Donate</option>
+                                    <option value="event">Attend Event</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea placeholder="Your Message"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Campaign Offices -->
+        <section class="vision" style="background-color: #f9f9f9; padding: 50px 0;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Regional Campaign Offices</h2>
+                    <p>Visit one of our offices across Uganda to get campaign materials or register as a volunteer</p>
+                </div>
+                
+                <div class="vision-points">
+                    <div class="vision-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Northern Region</h3>
+                        <p>Plot 22, Gulu Main Street, Gulu</p>
+                        <p><strong>Contact:</strong> +256 47 444 3322</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Eastern Region</h3>
+                        <p>Block 5, Mbale Road, Jinja</p>
+                        <p><strong>Contact:</strong> +256 43 222 1199</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Western Region</h3>
+                        <p>Building 10, Mbarara High Street</p>
+                        <p><strong>Contact:</strong> +256 48 555 6677</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Museveni 2026</h3>
+                    <p>For A Better Uganda</p>
+                    <p>Join us in building a stronger, united, and prosperous Uganda for all citizens.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="page-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="page-link" data-page="about">About</a></li>
+                        <li><a href="#" class="page-link" data-page="vision">Vision</a></li>
+                        <li><a href="#" class="page-link" data-page="gallery">Gallery</a></li>
+                        <li><a href="#" class="page-link" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Campaign Updates</h3>
+                    <p>Subscribe to receive latest campaign news and event updates.</p>
+                    <form style="margin-top: 15px;">
+                        <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px;">
+                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Museveni 2026 Campaign. All Rights Reserved.</p>
+                <p style="margin-top: 10px;">Paid for by the National Resistance Movement</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Page Navigation
+        document.querySelectorAll('.page-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const page = this.getAttribute('data-page');
+                
+                // Hide all pages
+                document.querySelectorAll('main').forEach(main => {
+                    main.style.display = 'none';
+                });
+                
+                // Show selected page
+                document.getElementById(`${page}-page`).style.display = 'block';
+                
+                // Update active nav item
+                document.querySelectorAll('nav ul li').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                this.parentElement.classList.add('active');
+                
+                // Close mobile menu if open
+                document.querySelector('nav').classList.remove('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+
+        // Smooth scrolling for same-page links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.getElementById('campaign-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+
+        // Animate progress bars on scroll
+        function animateProgressBars() {
+            const progressFillElements = document.querySelectorAll('.progress-fill');
+            const windowHeight = window.innerHeight;
+            
+            progressFillElements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                
+                if (position < windowHeight - 100) {
+                    const width = element.style.width;
+                    element.style.width = '0';
+                    
+                    setTimeout(() => {
+                        element.style.width = width;
+                    }, 100);
+                }
+            });
+        }
+
+        // Run on initial load and scroll
+        window.addEventListener('load', animateProgressBars);
+        window.addEventListener('scroll', animateProgressBars);
+    </script>
+</body>
+</html>
